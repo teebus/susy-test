@@ -148,7 +148,7 @@ header {
   color: #FFFFFF;
 }
 /* line 6, ../../../components/sass/modules/_nav.scss */
-header #nav {
+header nav {
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -156,34 +156,34 @@ header #nav {
   text-align: center;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 /* line 12, ../../../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
-header #nav:after {
+header nav:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 15, ../../../components/sass/modules/_nav.scss */
-header #nav li {
+/* line 14, ../../../components/sass/modules/_nav.scss */
+header nav li {
   min-width: 2em;
-  margin: .5em;
-  padding: .5em;
+  margin: .5em 0;
+  padding: .5em 0;
   display: inline-block;
   /* non-flexbox browsers */
   -webkit-flex: 1 0;
   flex: 1 0;
 }
-/* line 22, ../../../components/sass/modules/_nav.scss */
-header #nav li a {
+/* line 21, ../../../components/sass/modules/_nav.scss */
+header nav li a {
   color: #fff;
   text-decoration: none;
 }
-/* line 27, ../../../components/sass/modules/_nav.scss */
-header #nav li a:hover {
+/* line 26, ../../../components/sass/modules/_nav.scss */
+header nav li a:hover {
   text-decoration: underline;
 }
 

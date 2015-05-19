@@ -1,34 +1,33 @@
 header {
-min-height: 40px;
-background: $blue;
-color: $light;
+  min-height: 40px;
+  background: $blue;
+  color: $light;
 
-	#nav {
-	@include container;
- 	 padding: 0;
- 	 text-align: center;
- 	 @include display-flex;
- 	 @include justify-content(flex-end);
- 	 @include flex-wrap(wrap);
+  nav {
+    @include container;
+    padding: 0;
+    text-align: center;
+    @include display-flex;
+    @include justify-content(flex-start);
+    @include flex-wrap(wrap);
 
+      li {
+        min-width: 2em;
+        margin: .5em 0; 
+        padding: .5em 0;
+        display: inline-block; /* non-flexbox browsers */
+        @include flex(1 0);
 
-  li {
-    min-width: 2em;
-    margin: .5em;
-    padding: .5em;
-    display: inline-block; /* non-flexbox browsers */
-    @include flex(1 0);
+           a {
+           color: #fff;
+           text-decoration: none;
+            } //a
 
-    a {
-      	color: #fff;
-      	text-decoration: none;
-    }
+           a:hover {
+          text-decoration: underline;
+           } // a:hover
 
-    a:hover {
-    text-decoration: underline;
-    }
+      } //li
 
-  } //li
-
-    } //nav
+  }  //nav
 } //header
