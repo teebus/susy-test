@@ -1,0 +1,19 @@
+article {
+	@include span(12);
+
+	@include breakpoint($medium, $wide) {
+		@include span(9);
+	}
+  } //article
+
+
+  aside {
+  	@include span(12);
+
+  	margin-top: 4rem;
+
+  	@include breakpoint($medium, $wide) {
+  		@include span(3);
+  		margin-top: 0;
+  	}
+} //aside

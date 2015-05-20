@@ -4,12 +4,19 @@ header {
   color: $light;
 
   nav {
-    @include container;
-    padding: 0;
-    text-align: center;
+    @include container(90%);
+          @include breakpoint ($wide) {
+        @include container;
+      }
+
     @include display-flex;
     @include justify-content(flex-start);
     @include flex-wrap(wrap);
+
+ul {
+  @include span (12);
+}
+
 
       li {
         min-width: 2em;

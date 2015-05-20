@@ -73,14 +73,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 1, ../../../components/sass/_base.scss */
 body {
-  font: 200 1em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 200 1em/1.5em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #FFFFFF;
   color: #000000;
 }
 
 /* line 7, ../../../components/sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
-  font: 200 1.5em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 200 1.5em/1.5em "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #0e83a0;
   font-weight: 600;
 }
@@ -103,12 +103,40 @@ body {
   height: 100%;
 }
 
-/* line 7, ../../../components/sass/_layout.scss */
+/* line 9, ../../../components/sass/_layout.scss */
+.wrapper {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+/* line 12, ../../../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+.wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 1200px) {
+  /* line 9, ../../../components/sass/_layout.scss */
+  .wrapper {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+  .wrapper:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+/* line 18, ../../../components/sass/_layout.scss */
 .scene {
   position: relative;
   padding: 20px 0;
 }
-/* line 11, ../../../components/sass/_layout.scss */
+/* line 22, ../../../components/sass/_layout.scss */
 .scene article {
   max-width: 95%;
   margin-left: auto;
@@ -121,13 +149,13 @@ body {
   clear: both;
 }
 @media (min-width: 1200px) {
-  /* line 7, ../../../components/sass/_layout.scss */
+  /* line 18, ../../../components/sass/_layout.scss */
   .scene {
     padding: 40px 0;
   }
 }
 @media (min-width: 960px) {
-  /* line 20, ../../../components/sass/_layout.scss */
+  /* line 31, ../../../components/sass/_layout.scss */
   .scene article {
     max-width: 70%;
     margin-left: auto;
@@ -149,11 +177,9 @@ header {
 }
 /* line 6, ../../../components/sass/modules/_nav.scss */
 header nav {
-  max-width: 70%;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
-  text-align: center;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: flex-start;
@@ -167,7 +193,31 @@ header nav:after {
   display: block;
   clear: both;
 }
-/* line 14, ../../../components/sass/modules/_nav.scss */
+@media (min-width: 1200px) {
+  /* line 6, ../../../components/sass/modules/_nav.scss */
+  header nav {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+  header nav:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/* line 16, ../../../components/sass/modules/_nav.scss */
+header nav ul {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+/* line 21, ../../../components/sass/modules/_nav.scss */
 header nav li {
   min-width: 2em;
   margin: .5em 0;
@@ -177,26 +227,60 @@ header nav li {
   -webkit-flex: 1 0;
   flex: 1 0;
 }
-/* line 21, ../../../components/sass/modules/_nav.scss */
+/* line 28, ../../../components/sass/modules/_nav.scss */
 header nav li a {
   color: #fff;
   text-decoration: none;
 }
-/* line 26, ../../../components/sass/modules/_nav.scss */
+/* line 33, ../../../components/sass/modules/_nav.scss */
 header nav li a:hover {
   text-decoration: underline;
 }
 
-/* line 1, ../../../components/sass/modules/_article.scss */
+/* line 1, ../../../components/sass/modules/_homepage.scss */
 article {
-  max-width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
 }
-/* line 12, ../../../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
-article:after {
-  content: " ";
-  display: block;
-  clear: both;
+@media (min-width: 960px) {
+  /* line 1, ../../../components/sass/modules/_homepage.scss */
+  article {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+}
+
+/* line 10, ../../../components/sass/modules/_homepage.scss */
+aside {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  margin-top: 4rem;
+}
+@media (min-width: 960px) {
+  /* line 10, ../../../components/sass/modules/_homepage.scss */
+  aside {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin-top: 0;
+  }
 }

@@ -4,6 +4,17 @@ body {
   height: 100%;
 }
 
+
+
+.wrapper {
+  @include container(90%);
+      margin-top: 3rem;
+
+      @include breakpoint ($wide) {
+        @include container;
+      }
+}
+
 .scene {
   position: relative;
   padding: 20px 0;
