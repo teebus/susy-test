@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     browserify = require('gulp-browserify'),
+    autoprefixer = require('gulp-autoprefixer'),
     stylish = require('jshint-stylish'),
     jshint = require('gulp-jshint'),
     w3cjs = require('gulp-w3cjs'),
@@ -65,7 +66,12 @@ gulp.task('compass', function() {
       require: ['susy', 'breakpoint']
     })
     .on('error', gutil.log))
-//    .pipe(gulp.dest( outputDir + 'css'))
+
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+    .pipe(gulp.dest('development/css'))
     .pipe(connect.reload());
 });
 
