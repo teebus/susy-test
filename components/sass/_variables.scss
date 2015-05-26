@@ -1,12 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
 
-@include border-box-sizing; //uses border box sizing like the old IE
+// @include border-box-sizing; //uses border box sizing like the old IE
+
+@mixin box-sizing($value) {
+-moz-box-sizing: $value;
+box-sizing: $value;
+}
 
 $susy: (
   columns: 12,
   container: 70%,
   gutters: 1/4,
-  gutter-position: inside
+  gutter-position: after
 );
 
 $narrow: 400px;

@@ -1,25 +1,59 @@
 article {
-	@include span(12);
+	@include span(12 of 12);
 
 	@include breakpoint($medium, $wide) {
-		@include span(9);
-	}
-  } //article
+		@include span(9 of 12);
+
+  } //breakpoint
+
+.two-column {
+  @include span(12 of 12 nest);
+
+
+    @include breakpoint($medium, $wide) {
+
+
+      div:nth-child(1) {
+      @include span(first 6 of 12);
+    }
+      div:nth-child(2) {
+      @include span(last 6 of 12);
+    }
+  }
+}
+
+
+} //article
+
+
+  .gallery {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px -5px;
+
+    figure {
+      width: 300px;
+      flex: auto; 
+      felx-basis: 300px; 
+      margin: 2.5px 5px; 
+
+      img {
+        width: 100%; 
+        height: auto; 
+      } //img
+    } //figure
+  }  //gallery
 
 
   aside {
-  	@include span(12);
+  	@include span(12 of 12);
 
   	margin-top: 4rem;
 
   	@include breakpoint($medium, $wide) {
-  		@include span(3);
+  		@include span(3 of 12 last);
   		margin-top: 0;
   	}
 } //aside
-
-
-
-.test {
-  display:flex;
-}
